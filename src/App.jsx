@@ -13,7 +13,7 @@ function App() {
       <header className='container mx-auto pt-8 px-4'>
         <div className="flex justify-between">
           <h1 className="uppercase text-white text-3xl font-semibold tracking-[0.5em]">Todo</h1>
-          <button><MoonIcon fill="#fff" /></button>
+          <button><MoonIcon fill="red" /></button>
         </div>
         
         <form className='flex gap-4 items-center bg-white overflow-hidden rounded-md py-4 px-4 my-8' action="">
