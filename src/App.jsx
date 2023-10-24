@@ -8,9 +8,9 @@ import TodoFilter from './components/TodoFilter'
 import TodoList from './components/TodoList'
 
 const initialStateTodo = [
-  {id:0, title:'Complete Online Curse Js', completed: false},
+  {id:0, title:'Complete Online Curse Js', completed: true},
   {id:1, title:'Go to the school', completed: false},
-  {id:2, title:'Go to the gym', completed: false},
+  {id:2, title:'Go to the gym', completed: true},
   {id:3, title:'Go to the market', completed: false},
 ]
 
