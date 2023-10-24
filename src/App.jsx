@@ -18,14 +18,31 @@ function App() {
 
   const [todos, setTodos] = useState(initialStateTodo)
 
+  const createTodo = (title) => {
+    const newTodo = {
+      id: todos.length,
+      title,
+      completed: false
+    }
+
+    setTodos([...todos, newTodo])
+  }
+
+  const deleteTodo = (id) => {
+    const newTodos = todos.filter(todo => todo.id !== id)
+    setTodos(newTodos)
+  }
+
+  const totalTodos = todos.length
+
   return (
     <div className="bg-[url('./assets/images/bg-mobile-light.jpg')] bg-no-repeat bg-contain min-h-screen bg-gray-300">
       <Header />
       
       <main className='container mx-auto mt-8 px-4'>
-        <TodoCreate />
-        <TodoList todos={todos} />
-        <TodoComputed />
+        <TodoCreate createTodo={createTodo} />
+        <TodoList todos={todos} deleteTodo={deleteTodo} />
+        <TodoComputed totalTodos={totalTodos} />
         <TodoFilter />
       </main>
       
